@@ -29,6 +29,6 @@ public class Main {
         images.put("java_logo", "template/images/java_logo.png");
 
         // You can also add attachments after the images argument
-        emailSender.sendMail(to, subject, images, "LICENSE");
+        emailSender.sendMail(to, subject, images, "LICENSE.txt");
     }
 }
