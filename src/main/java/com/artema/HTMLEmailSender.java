@@ -98,14 +98,16 @@ public class HTMLEmailSender {
             multipart.addBodyPart(bodyPart);
 
             // Images
-            for (Map.Entry<String, String> image : images.entrySet()) {
-                MimeBodyPart imageAttachment = new MimeBodyPart();
+            if (images != null) {
+                for (Map.Entry<String, String> image : images.entrySet()) {
+                    MimeBodyPart imageAttachment = new MimeBodyPart();
 
-                imageAttachment.setHeader("Content-ID", "<" + image.getKey() + ">");
-                imageAttachment.attachFile(image.getValue());
-                imageAttachment.setDisposition(MimeBodyPart.INLINE);
+                    imageAttachment.setHeader("Content-ID", "<" + image.getKey() + ">");
+                    imageAttachment.attachFile(image.getValue());
+                    imageAttachment.setDisposition(MimeBodyPart.INLINE);
 
-                multipart.addBodyPart(imageAttachment);
+                    multipart.addBodyPart(imageAttachment);
+                }
             }
 
             // Attachments
