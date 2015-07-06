@@ -10,7 +10,7 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        String to = "aeelinn@gmail.com";
+        String to = "mail@gmail.com";
         String subject = "A very important subject";
 
         // Creation of a HTMLEmailSender object. You must provide a templame name
