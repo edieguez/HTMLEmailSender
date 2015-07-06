@@ -23,7 +23,7 @@ port: 587
 With this code you can send a mail like this README file and an attachment file
 ```java
 public static void main(String[] args) {
-    String to = "aeelinn@gmail.com";
+    String to = "mail@gmail.com";
     String subject = "A very important subject";
 
     // Creation of a HTMLEmailSender object. You must provide a template name
